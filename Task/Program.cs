@@ -3,7 +3,7 @@
 // либо задать на старте выполнения алгоритма. При решении не рекомендуется пользоваться коллекциями, 
 // лучше обойтись исключительно массивами.
 Console.Clear();
-string[] arrayStrings = { "hello", "2", "world", ":-)", "1234", "1567", "-2", "computer science", "Russia", "Denmark", "Kazan" };
+string[] arrayStrings = { "hello", "2", "world", ":-)", "6 5", " 11", "-2", "computer science", "Russia", "Denmark", "Kazan" };
 
 string[] SortStringArrayLess4Digits(string[] stringtosort)
 {
@@ -17,9 +17,9 @@ string[] SortStringArrayLess4Digits(string[] stringtosort)
     }
 
     string[] sortedArray = new string[counterDigits];
+    int digitCounterSortedArray = 0;
     for (int j = 0; j < stringtosort.Length; j++)
     {
-        int digitCounterSortedArray = 0;
         if (stringtosort[j].Length < 4)
         {
             sortedArray[digitCounterSortedArray] = stringtosort[j];
@@ -30,13 +30,15 @@ string[] SortStringArrayLess4Digits(string[] stringtosort)
 }
 void PrintStringArray(string[] stringarray)
 {
-    for (int i = 0; i < stringarray.Length; i++)
+    for (int k = 0; k < stringarray.Length; k++)
     {
 
-        Console.Write($"{stringarray[i]} ");
+        Console.Write($"{stringarray[k]} ");
 
         Console.WriteLine();
     }
 }
 PrintStringArray(arrayStrings);
+Console.WriteLine("");
+Console.WriteLine("Рeзультат сортировки");
 PrintStringArray(SortStringArrayLess4Digits(arrayStrings));
