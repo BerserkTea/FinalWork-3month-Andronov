@@ -30,3 +30,13 @@ string [] SortStringArrayLess4Digits (string [] stringtosort)
     }
     return sortedArray;
 }
+void PrintStringArray (string[] stringarray)
+{
+    for (int i = 0; i < stringarray.Length; i++)
+    {
+    
+        Console.Write($"{stringarray[i]} ");
+    
+    Console.WriteLine();
+    }
+}
